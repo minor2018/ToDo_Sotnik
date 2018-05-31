@@ -65,9 +65,9 @@ class App extends Component {
                     </form>
                 </header>
 
-                <ul>
-                    {this.renderTasks()}
-                </ul>
+
+                {this.renderTasks()}
+
             </div>
         );
     }

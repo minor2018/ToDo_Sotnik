@@ -25,14 +25,13 @@ export default class Task extends Component {
                     <Glyphicon glyph="remove"/>
                 </Button>
 
-                <Button bsStyle="warning"
-                        checked={!!this.props.task.checked}
-                        onClick={this.toggleChecked.bind(this)}>
-                    <Glyphicon glyph="ok"/>
-                </Button>
+
+                        <Button bsStyle={!!this.props.task.checked?"success":"warning"} onClick={this.toggleChecked.bind(this)}>
+                            <Glyphicon glyph={!!this.props.task.checked?"ok":"repeat"}/>
+                        </Button>
                 </ButtonGroup>
 
-                <p></p>
+
 
                 <span className="text">{this.props.task.text}</span>
 
